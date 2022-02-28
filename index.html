@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .IMP::before{
+            content:"*";
+            color: RED;
+        }
+        body{
+            height:100vh;
+            background: rgb(20, 34, 236);
+            
+        }
+        .container{
+            display: block;
+            margin: auto;
+            width: 100%;
+           
+            box-sizing: border-box;
+            background: rgb(248, 233, 205);
+        }
+        #header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            justify-content: center;
+           
+         
+           
+            background: rgb(219, 30, 30) ;
+            
+
+        }
+        #header > h4{
+            text-align: center;
+            color: rgb(244, 246, 247);   
+        }
+        #header > p{
+            text-align: center;
+            font-style: italic;
+            font-weight:100;
+            color: rgb(244, 246, 247);  
+        }
+        table{
+            /* background-color: antiquewhite; */
+            width: 100%;
+            border-collapse:collapse;
+        }
+        tr,td{
+            border: 1px solid black;     
+        }
+        .containw{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: revert;
+           align-items:center;
+            width: auto;  
+        
+        }
+        /* utility area */
+        /* this for adding margin in radio button  */
+        .select{
+            outline: none;
+            margin: 0px 6px;
+        }
+        /* this for adding left margin in input text */
+        .space{
+            display:inline-block;
+            margin-left: 300px;
+        }
+        strong{
+            outline: none;
+            border: none;
+        }
+      
+        /* this for making title input block element  */
+        .block{
+
+            display: block;
+            outline: none;
+        }
+        /* for making title name container into flex */
+        .flex{
+            align-items: left;
+            display: flex; 
+            justify-items: center;
+        }
+        /* for making title name container into flex */
+        .title{
+            margin-left: 114px;
+        }
+        /* dding left margin in date input */
+        #date{
+            margin-left: 200px;
+        }
+        
+        @media screen and (max-width:948px) {
+            .flex{
+                flex-wrap: wrap; 
+                margin: auto; 
+                justify-content: center;
+            }
+           
+            
+            .title{
+                margin: 0px 6px;
+            }
+            .space{
+                margin: auto;
+            }
+        }
+        @media screen and (max-width:674px) {
+   
+          .container{
+              width: 100%;
+             
+          } 
+         #header{
+             width: 100vw;
+         }
+          form{
+              margin:0px 3px 0px 6px;
+          }
+           #date{
+              margin: auto;
+          } 
+          #btn{
+              border-radius: 6px;
+              padding: 4px;
+              margin:  0px 0px 6px 0px;
+          }    
+       }
+       @media screen and (max-width:370px) {
+         
+          #header{
+              
+              position: absolute;
+              width: 410px;
+              z-index: 1;
+          } 
+          .container{
+              position: absolute;
+              width: 410px;
+              top:73px;
+          }
+         
+       }
+      
+    </style>
+</head>
+<body>  
+    <header id="header"> <h4> Request For New PAN Card/And Changes Or Correction In PAN Data </h4>
+        <p class="italic">Field mark with *(asterisk) are mandatory.To avoid mistake(s).please refer guidlinesand instruction</p>
+</header> 
+    <div class="container">
+        <form action="">
+           <table>
+                <!-- confirm citizen -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class="IMP"> <strong> Whether citizen of India </strong></span><span class="space">
+                     Yes<input class="select"type="radio" name="select">
+                     NO<input class="select" type="radio" name="select"></span>
+                    </td>
+                    
+                </tr>
+                <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class="containw IMP"> <strong> Permanent Account Number (PAN)</strong>
+                    <span class="space"><input class="select"type="text" name="select"></span>
+                    </td>     
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"><input class="select" type="checkbox"name="select"> </td>
+                    <td class="IMP"> <strong> 1.Name </strong></td>    
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class=""> <strong> Title </strong></span>
+                    <span class="space">
+                    Shri/Mr<input class="select"type="radio" name="title"> 
+                    Smt/Mrs.<input class="select"type="radio" name="title">  
+                    Kumari/Ms<input class="select"type="radio" name="title">  
+                    M/s<input class="select" type="radio" name="title">
+                    </span>
+                    </td>    
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class=""> </span>
+                    <span class=" flex">
+                        <div class=""> <strong>  Last Name/Surname</strong><input type="text" class="block" name="title"> </div> 
+                    <div class="title"> <strong>  First Name</strong><input type="text" class="block" name="title"> </div> 
+                    <div class="title"> <strong>  Middle Name</strong><input type="text"class="block" name="title"> </div> 
+                    </span>
+                    </td>    
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class=""> </td>
+                    <td class="phone IMP"> <strong>Name as you would like it printed on the card </strong> (Prefix like Shri,Smt,Kumari,Late,Dr,CA,Ms,Mr,Mrs,M/s,Alias etc are not allowed)
+                    </td>    
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class=""> </td>
+                    <td class="containw "> <strong>Whether mother is single parent and you wish to apply for PAN by furnising the name of your mother only </strong> Yes<input type="radio" name="mother" class="select">No<input type="radio" name="mother" class="select">
+                    </td>    
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> <input type="checkbox" class="select"> </td>
+                    <td class="IMP"> <strong>Father's Name </strong> (Mandatory field Even married women should give father's name only)
+                    </td>    
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class=""> </span>
+                    <span class=" flex">
+                        <div class=""> <strong>  Last Name/Surname</strong><input type="text" class="block" name="title"> </div> 
+                    <div class="title"> <strong>  First Name</strong><input type="text" class="block" name="title"> </div> 
+                    <div class="title"> <strong>  Middle Name</strong><input type="text"class="block" name="title"> </div> 
+                    </span>
+                    </td>    
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> <input type="checkbox" class="select"> </td>
+                    <td class=""> Mother's Name(This field is optional.)
+                    </td>    
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class="IMP">
+                        <strong> 4. Select Parent name which is to be printed on card</strong> <br>(In case no option is provided then PAN card will be issued with father's name) 
+                            &nbsp&nbsp&nbsp&nbsp
+                           Father Name <input type="radio" name="parent" >&nbsp&nbsp
+                           Mother Name <input type="radio" name="parent" >
+                    </td>    
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> <input type="checkbox" class="select"> </td>
+                    <td class="IMP"><strong>
+                       5. Date of birth/Incorporation/Agreement/Partenership or Trust Deed/Formation of Body of Indivisuals/Association of Person <input type="date" id="date" name="" id="">
+                    </strong>
+                    </td>    
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw">  <input type="checkbox" class="select"></td>
+                    <td class="IMP"> <strong>6.Gender</strong></span>
+                    <span class="space">
+                    Male<input class="select"type="radio" name="Gender"> 
+                    Female<input class="select"type="radio" name="Gender">  
+                    Transgender<input class="select"type="radio" name="Gender">  
+                    </span>
+                    </td> 
+                </tr>  
+                  <!-- pan no --> 
+                <tr>
+                    <td class="checkw">  <input type="checkbox" class="select"></td>
+                    <td class=""> <strong>7.Photo Mismatch</strong>
+                    
+                    </td> 
+                </tr> 
+                  <!-- pan no -->  
+                <tr>
+                    <td class="checkw">  <input type="checkbox" class="select"></td>
+                    <td class=""> <strong>8.Signature Mismatch</strong>
+                    
+                    </td> 
+                </tr> 
+                  <!-- pan no -->  
+                <tr>
+                    <td class="checkw">  <input type="checkbox" class="select"></td>
+                    <td class=""> <strong>9.Address of Commnication</strong> <span class="space">
+                      Residental  <input type="radio" name="address" id="">
+                      0ffice  <input type="radio" name="address" id="">
+                    </span>
+                    
+                    </td> 
+                </tr> 
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class=""> <strong>  Office Name</strong>(to be filled only in case of office address )
+                    <span class="space"><input class="select"type="text" name="select"></span>
+                    </td>     
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class="containw "> <strong> Flat/Door/block No </strong>
+                    <span class="space"><input class="select"type="text" name="select"></span>
+                    </td>     
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class="containw"> <strong> Name of Premises/Building/Village</strong>
+                    <span class="space"><input class="select"type="text" name="select"></span>
+                    </td>     
+                </tr> 
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class="containw "> <strong> Road/Street/Lane/Post Office</strong>
+                    <span class="space"><input class="select"type="text" name="select"></span>
+                    </td>     
+                </tr> 
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class="containw "><strong> Area/Locality/Taluka/Sub-Division</strong>
+                    <span class="space"><input class="select"type="text" name="select"></span>
+                    </td>     
+                </tr>
+                  <!-- pan no -->
+                <tr>
+                    <td class="checkw"> </td>
+                    <td class="containw     "><strong> Town/City/District</strong>
+                    <span class="space"><input class="select"type="text" name="select"></span>
+                    </td>     
+                </tr>
+                 <!-- pan no --> <tr>
+                    <td class="checkw"> </td>
+                    <td class="containw "> <strong> State/Union Territory</strong>
+                    <span class="space"><select name="Select state" id="" >
+                        <option value="">--Select State--</option>
+                        <option value="">Uttar Pradesh</option>
+                        <option value="">Uttarakhand</option>
+                        <option value="">Himanchal Pradesh</option>
+                        <option value="">Jammu Kashmir</option>
+                    </select>
+                    </td>     
+                </tr>
+                 <!-- pan no --> <tr>
+                    <td class="checkw"> </td>
+                    <td class="containw "><strong>PIN (Indicating PIN is Mandatory)</strong>
+                    <span class="space"><input class="select"type="text" name="select"></span>
+                    </td>     
+                </tr>
+                 <!-- pan no --> <tr>
+                    <td class="checkw"> </td>
+                    <td class="containw"> <strong>Country</strong>
+                    <span class="space"><select name="Select state" id="" >
+                        <option value="">--Select Country--</option>
+                        <option value="">India</option>
+                        <option value="">America</option>
+                        <option value="">England</option>
+                        <option value="">Russia</option>
+                        <option value="">Japan</option>
+                    </select>
+                    </td>     
+                </tr>
+                <!-- pan no -->  <tr>
+                    <td class="checkw"> </td>
+                    <td class="containw "><strong>Zip</strong>
+                    <span class="space"><input class=""type="text" name="select"></span>
+                    </td>     
+                </tr>
+                <tr>
+                    <td class="checkw"><input type="checkbox" name="" class="select"> </td>
+                    <td class="containw "><strong>10.If you desire to update your other address,give required details & <a href="#"> Submit proof of adress also.</a> </strong>
+                         
+                </tr>
+            
+                   
+                
+                
+            </table>
+            <div class="checkw">For Paperless PAN Application: Yes <input type="radio" class="select" value="yes">No <input type="radio" value="No"></div> 
+            <select name="" id="" >
+                <option value="">select</option>
+            </select>
+            <div class="">Upload photo  <input type="file" name="" id="" class="space"></div>
+            <div class="" >Upload Signature <input type="file" name="" id="" class="space"></div>
+            <div class="">Upload Document  <input type="file" name="" id="" class="space"></div>
+            <div class="">ALREADY UPLOADED photo:   <input type="photo" name="" id="" class="space"></div>
+            <div class="">ALREADY UPLOADED SIGNATURE:   <input type="photo" name="" id="" class="space"></div>
+            <div class="">ALREADY UPLOADED DOCUMENT:  </div>
+            <textarea name="" class="space" id="" cols="30" rows="3"></textarea>
+           <br> <input id="btn"type="submit" value="submit">
+        </form>
+    </div>
+</body>
+</html>
